@@ -48,5 +48,34 @@ namespace CustomContainerTest
 
             Assert.AreEqual("abc", li.Show(0));
         }
+
+        [TestMethod]
+        public void ClearList()
+        {
+            var li = new MyList<string>();
+
+            li.Append("abc");
+            li.Append("def");
+            li.Clear();
+
+            Assert.AreEqual(0, li.Count);
+
+            li.Append("ceg");
+            Assert.AreEqual("ceg", li.Show(0));
+        }
+
+        [TestMethod]
+        public void ForEachTest()
+        {
+            var li = new MyList<int>();
+
+            int[] nums = { 1, 2, 4, 6 };
+            foreach (int num in nums)
+                li.Append(num);
+
+            int i = 0;
+            foreach (int element in li)
+                Assert.AreEqual(nums[i++], element);
+        }
     }
 }

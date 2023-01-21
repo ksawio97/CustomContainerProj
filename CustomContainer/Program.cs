@@ -8,13 +8,14 @@ namespace CustomContainer
         {
             MyList<int> l = new MyList<int>();
 
+            l.Append(1);
             l.Append(2);
             l.Append(3);
-            l.Append(5);
-            l.Append(6);
-            Console.WriteLine(l.Show(0));
 
-            Console.WriteLine(l.Show(1));
+            foreach (var element in l)
+            {
+                Console.WriteLine(element);
+            }
         }
     }
 }
