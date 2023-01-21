@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomContainer", "CustomContainer\CustomContainer.csproj", "{CA2B7817-CD92-463E-A9D3-6246BF7AB75F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomContainerTest", "CustomContainerTest\CustomContainerTest.csproj", "{F90AA9C8-F899-4365-A824-7BD89A40AD62}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA2B7817-CD92-463E-A9D3-6246BF7AB75F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA2B7817-CD92-463E-A9D3-6246BF7AB75F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA2B7817-CD92-463E-A9D3-6246BF7AB75F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA2B7817-CD92-463E-A9D3-6246BF7AB75F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F90AA9C8-F899-4365-A824-7BD89A40AD62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F90AA9C8-F899-4365-A824-7BD89A40AD62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F90AA9C8-F899-4365-A824-7BD89A40AD62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F90AA9C8-F899-4365-A824-7BD89A40AD62}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {43260CA2-5C22-4570-89B8-F862D2150DFF}
+	EndGlobalSection
+EndGlobal
