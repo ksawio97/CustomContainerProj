@@ -22,7 +22,7 @@ namespace CustomContainerTest
 
             li.Append(1);
 
-            Assert.AreEqual(1, li.Show(0));
+            Assert.AreEqual(1, li[0]);
         }
 
         [TestMethod]
@@ -35,7 +35,7 @@ namespace CustomContainerTest
                 li.Append(num);
 
             for (int i = 0; i < nums.Length; i++)
-                Assert.AreEqual(nums[i], li.Show(i));
+                Assert.AreEqual(nums[i], li[i]);
         }
 
         [TestMethod]
@@ -46,7 +46,7 @@ namespace CustomContainerTest
             li.Append("abc");
             li.Append("def");
 
-            Assert.AreEqual("abc", li.Show(0));
+            Assert.AreEqual("abc", li[0]);
         }
 
         [TestMethod]
@@ -61,7 +61,7 @@ namespace CustomContainerTest
             Assert.AreEqual(0, li.Count);
 
             li.Append("ceg");
-            Assert.AreEqual("ceg", li.Show(0));
+            Assert.AreEqual("ceg", li[0]);
         }
 
         [TestMethod]
@@ -76,6 +76,19 @@ namespace CustomContainerTest
             int i = 0;
             foreach (int element in li)
                 Assert.AreEqual(nums[i++], element);
+        }
+
+        [TestMethod]
+        public void IndexWork()
+        {
+            var li = new MyList<int>();
+
+            int[] nums = { 1, 2, 4, 6 };
+            foreach (int num in nums)
+                li.Append(num);
+
+            for (int i = 0; i < li.Count; i++)
+                Assert.AreEqual(nums[i], li[i]);
         }
     }
 }

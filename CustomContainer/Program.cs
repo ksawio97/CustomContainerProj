@@ -12,6 +12,7 @@ namespace CustomContainer
             l.Append(2);
             l.Append(3);
 
+            l[3] = 4;
             foreach (var element in l)
             {
                 Console.WriteLine(element);

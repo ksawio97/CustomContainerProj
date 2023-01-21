@@ -36,13 +36,25 @@ namespace CustomContainer
             return curr;
         }
 
-        public T Show(int index)
+        private void CheckIndex(int index)
         {
             if (Count <= index)
                 new IndexOutOfRangeException($"{Count - 1} is max index");
-
+            if (index < 0)
+                new IndexOutOfRangeException($"Min index is 0");
+        }
+        private T GetValue(int index)
+        {
+            CheckIndex(index);
             return GoTo(index).value;
         }
+
+        private void SetValue(int index, T value)
+        {
+            CheckIndex(index);
+            GoTo(index).value = value;
+        }
+
 
         public void Clear()
         {
@@ -50,6 +62,11 @@ namespace CustomContainer
             _count = 0;
         }
 
+        public T this[int index]
+        {
+            get => GetValue(index);
+            set => SetValue(index, value);
+        }
         public IEnumerator<T> GetEnumerator()
         {
             for (var curr = head; curr != null; curr = curr.next)
